@@ -109,13 +109,15 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
-    function stripX(string) {
-      characters = string.split("");
-      if(characters["x"]){
-        delete characters["x"];
-        let result = string.join("");
-        return result;
+    function stripX(str) {
+      let characters = str.split('');
+      for(let i in characters){
+        if(characters[i] === "x"){
+          delete characters[i];
+        }
       }
+      result = characters.join('');
+      return result;
     }
 
     // 👉 CHALLENGE 8
@@ -127,8 +129,15 @@
     // ❗ Important Notes:
     // 🧠 Try to solve this problem without looking at how you solved the previous one.
     // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-    function stripChar(string, character) {
-
+    function stripChar(str, char) {
+      let splitStr = str.split('');
+      for(let i in splitStr){
+        if(splitStr[i] === char){
+          delete splitStr[i];
+        }
+      }
+      result = splitStr.join('');
+      return result;
     }
 
     // 👉 CHALLENGE 9
@@ -140,7 +149,7 @@
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps(object) {
+    function getProps(obj) {
 
     }
 
