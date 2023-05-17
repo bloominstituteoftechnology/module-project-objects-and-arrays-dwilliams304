@@ -23,6 +23,11 @@
     // 🧠 Example of usage:
     // buildPeter() // should return { firstName: "Peter", lastName: "Pan", age: 12 }
     function buildPeter() {
+        const peterObject = {
+          firstName: 'Peter', lastName: 'Pan', age: 12
+        };
+        return peterObject;
+
 
     }
 
@@ -31,7 +36,10 @@
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
-
+      const userInfo = {
+        firstName, lastName, age
+      };
+      return userInfo;
     }
 
     // 👉 CHALLENGE 3
@@ -43,7 +51,7 @@
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
     function deletePrice() {
-
+      
     }
 
     // 👉 CHALLENGE 4
