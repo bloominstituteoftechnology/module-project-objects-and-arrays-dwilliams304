@@ -69,7 +69,7 @@
       if(arr.length % 2 === 0){
         return true;
       }
-      else{ return false; }
+      return false;
     }
 
     // 👉 CHALLENGE 5
@@ -79,7 +79,11 @@
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
     function firstOrLast(arr, bool) {
-      
+      let isTrue = Boolean(bool);
+      if(isTrue){
+        return arr[0];
+      }
+      return arr[arr.length - 1];
     }
 
     // 👉 CHALLENGE 6
@@ -88,8 +92,9 @@
     // 🧠 Examples of usage:
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-    function pushElement(value1, value2) {
-      value1 = [];
+    function pushElement(arr, value) {
+      arr[arr.length] = value;
+      return arr;
     }
 
     // 👉 CHALLENGE 7
