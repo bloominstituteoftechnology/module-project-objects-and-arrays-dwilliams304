@@ -150,7 +150,13 @@
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
     function getProps(obj) {
-
+      let result = [];
+      for (let key in obj){
+        if(key !== 'age' && key !== 'married'){
+          result[result.length] = key;
+        }
+      }
+      return result;
     }
 
     // 🧪 TESTS, do not work below this line
